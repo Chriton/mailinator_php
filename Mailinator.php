@@ -17,7 +17,6 @@ class Mailinator
 		$url = http_build_query(array_merge($params, array('token' => $this->token)));
 		curl_setopt($ch, CURLOPT_URL, $this->apiEndpoint . $method . '?' . $url);
 		curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-		curl_setopt($ch, CURLOPT_POSTFIELDS, array_merge($params, array('token' => $this->token)));
 		curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
 		curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
 		curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
