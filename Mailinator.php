@@ -32,7 +32,7 @@ class Mailinator
 		}
 		else
 		{
-			throw new Exception('There was an error contacting the mailinator API endpoint.');
+			throw new Exception('There was an error contacting the mailinator API endpoint. The HTTP status code returned was: ' . $info["http_code"] );
 		}
 	}
 
